@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Engineering Academy</title>
+  <meta property="og:title" content="AI Engineering Academy — zero to job-ready">
+  <meta property="og:description" content="A structured, day-by-day roadmap from your first line of Python to production AI apps.">
+  <meta name="description" content="Applied AI Engineering Academy — an interactive roadmap, curriculum, resource library and project gallery for becoming an AI engineer.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M9 22l7-12 7 12M12 18h8' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash. */
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('aiea.progress.v1') || '{}');
+        var t = s.theme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#/" aria-label="AI Engineering Academy — home">
+        <span class="brand-mark" id="brand-mark"></span>
+        <span>AI Engineering Academy<small>Foundations → Production</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary" id="primary-nav"></nav>
+      <div class="header-actions">
+        <div class="global-search" id="global-search">
+          <div class="search-wrap" role="search">
+            <span id="gs-icon"></span>
+            <input class="search-input" id="gs-input" type="search" placeholder="Search curriculum…" aria-label="Search modules, topics, resources, projects and tools" autocomplete="off" aria-controls="gs-results" aria-expanded="false">
+          </div>
+          <div class="search-results" id="gs-results" hidden></div>
+        </div>
+        <button class="icon-btn hide-desktop-search" id="search-btn" aria-label="Open search" style="display:none"></button>
+        <button class="icon-btn" id="theme-btn" aria-label="Switch colour theme"></button>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile"></nav>
+
+  <main id="main" tabindex="-1">
+    <noscript><div class="container section"><h1>JavaScript required</h1><p>This interactive academy needs JavaScript enabled to show the roadmap, curriculum and progress tracking.</p></div></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#/"><span class="brand-mark" id="brand-mark-2"></span><span>AI Engineering Academy</span></a>
+          <p class="text-sm muted mt-2">A free, open learning roadmap from programming foundations to production AI systems. Progress is stored only in this browser.</p>
+        </div>
+        <div><h4>Learn</h4><ul><li><a href="#/today">Today’s mission</a></li><li><a href="#/plan">Day-by-day plan</a></li><li><a href="#/roadmap">Learning roadmap</a></li><li><a href="#/curriculum">Curriculum explorer</a></li><li><a href="#/progress">Your progress</a></li></ul></div>
+        <div><h4>Build</h4><ul><li><a href="#/projects">Project gallery</a></li><li><a href="#/projects/p04">PDF Q&amp;A project</a></li><li><a href="#/projects/p12">Capstone project</a></li></ul></div>
+        <div><h4>Reference</h4><ul><li><a href="#/resources">Resource library</a></li><li><a href="#/stack">Technology stack</a></li><li><a href="#/resources?tag=security">Security resources</a></li></ul></div>
+      </div>
+      <p class="fine">External resources belong to their respective publishers; links were checked on <span id="checked-on"></span>. Technology names are trademarks of their owners and are shown as plain text — no logos are reproduced. No accounts, tracking or backend: nothing leaves your device.</p>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data/resources.js"></script>
+  <script src="js/data/curriculum-a.js"></script>
+  <script src="js/data/curriculum-b.js"></script>
+  <script src="js/data/paths.js"></script>
+  <script src="js/data/projects.js"></script>
+  <script src="js/data/stack.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/plan.js"></script>
+  <script src="js/diagrams.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/roadmap.js"></script>
+  <script src="js/views/curriculum.js"></script>
+  <script src="js/views/library.js"></script>
+  <script src="js/views/progress.js"></script>
+  <script src="js/views/today.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
